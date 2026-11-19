@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz;
+namespace AuthZ;
 
 /** The algorithm step that produced a denial (README "The helper"). */
 enum Step: string

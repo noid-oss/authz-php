@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests;
+namespace AuthZ\Tests;
 
 use PHPUnit\Framework\TestCase;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Http;
+namespace AuthZ\Http;
 
-use NoidOss\Authz\Reason;
+use AuthZ\Reason;
 
 final readonly class CheckResult
 {

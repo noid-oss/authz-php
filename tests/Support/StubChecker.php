@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests\Support;
+namespace AuthZ\Tests\Support;
 
-use NoidOss\Authz\Http\Checker;
-use NoidOss\Authz\Http\CheckOutcome;
-use NoidOss\Authz\Http\CheckResult;
+use AuthZ\Http\Checker;
+use AuthZ\Http\CheckOutcome;
+use AuthZ\Http\CheckResult;
 
 /** Stub of the live service driven by a vector's `liveCheck` (role = no object, object = with object). */
 final class StubChecker implements Checker

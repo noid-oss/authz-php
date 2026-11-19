@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz;
+namespace AuthZ;
 
+use AuthZ\Http\Checker;
+use AuthZ\Http\CheckOutcome;
 use Closure;
-use NoidOss\Authz\Http\Checker;
-use NoidOss\Authz\Http\CheckOutcome;
 
 /**
  * perms.can(user, permission, object?): the algorithm of authz-spec README "The helper".

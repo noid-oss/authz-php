@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests;
+namespace AuthZ\Tests;
 
+use AuthZ\Config;
+use AuthZ\Hint;
+use AuthZ\Tests\Support\FakeHttp;
+use AuthZ\Tests\Support\Keys;
+use AuthZ\TokenException;
+use AuthZ\TokenVerifier;
 use Firebase\JWT\JWT;
-use NoidOss\Authz\Config;
-use NoidOss\Authz\Hint;
-use NoidOss\Authz\Tests\Support\FakeHttp;
-use NoidOss\Authz\Tests\Support\Keys;
-use NoidOss\Authz\TokenException;
-use NoidOss\Authz\TokenVerifier;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Response;
 use PHPUnit\Framework\TestCase;

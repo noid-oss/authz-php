@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests;
+namespace AuthZ\Tests;
 
-use NoidOss\Authz\Config;
-use NoidOss\Authz\Http\CheckClient;
-use NoidOss\Authz\Http\CheckOutcome;
-use NoidOss\Authz\Tests\Support\FakeHttp;
-use NoidOss\Authz\Tests\Support\NetworkError;
+use AuthZ\Config;
+use AuthZ\Http\CheckClient;
+use AuthZ\Http\CheckOutcome;
+use AuthZ\Tests\Support\FakeHttp;
+use AuthZ\Tests\Support\NetworkError;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Response;
 use PHPUnit\Framework\Attributes\DataProvider;

@@ -33,8 +33,8 @@ Needs a PSR-18 client (for example `guzzlehttp/guzzle`) and PSR-17 factories (Gu
 ```php
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\HttpFactory;
-use NoidOss\Authz\{Config, Manifest, Perms, TokenVerifier};
-use NoidOss\Authz\Http\CheckClient;
+use AuthZ\{Config, Manifest, Perms, TokenVerifier};
+use AuthZ\Http\CheckClient;
 
 $config = new Config(
     brand: 'idbi',
@@ -65,7 +65,7 @@ $perms = new Perms($config, $manifest, $checks);
 Verify a token, then ask for permissions.
 
 ```php
-use NoidOss\Authz\TokenException;
+use AuthZ\TokenException;
 
 try {
     $user = $verifier->verify($bearerToken);       // VerifiedToken
@@ -113,7 +113,7 @@ Reasons: `allowed_claim`, `allowed_live`, `invalid_issuer`, `invalid_tenant`, `i
 ## HTTP guard (PSR-15)
 
 ```php
-use NoidOss\Authz\Guard;
+use AuthZ\Guard;
 
 // Default 'live' mode: writes are checked live. 401 = no/invalid token, 403 = denied (also on check error/timeout).
 $print = new Guard($verifier, $perms, $factory, 'invoice.print');

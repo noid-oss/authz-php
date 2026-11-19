@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests;
+namespace AuthZ\Tests;
 
+use AuthZ\Config;
+use AuthZ\Decision;
+use AuthZ\Guard;
+use AuthZ\Manifest;
+use AuthZ\Perms;
+use AuthZ\Tests\Support\FakeHttp;
+use AuthZ\Tests\Support\Keys;
+use AuthZ\Tests\Support\StubChecker;
+use AuthZ\TokenVerifier;
+use AuthZ\VerifiedToken;
 use InvalidArgumentException;
-use NoidOss\Authz\Config;
-use NoidOss\Authz\Decision;
-use NoidOss\Authz\Guard;
-use NoidOss\Authz\Manifest;
-use NoidOss\Authz\Perms;
-use NoidOss\Authz\Tests\Support\FakeHttp;
-use NoidOss\Authz\Tests\Support\Keys;
-use NoidOss\Authz\Tests\Support\StubChecker;
-use NoidOss\Authz\TokenVerifier;
-use NoidOss\Authz\VerifiedToken;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Response;
 use Nyholm\Psr7\ServerRequest;

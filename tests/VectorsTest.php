@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests;
+namespace AuthZ\Tests;
 
-use NoidOss\Authz\Config;
-use NoidOss\Authz\Grammar;
-use NoidOss\Authz\Manifest;
-use NoidOss\Authz\Perms;
-use NoidOss\Authz\Tests\Support\StubChecker;
+use AuthZ\Config;
+use AuthZ\Grammar;
+use AuthZ\Manifest;
+use AuthZ\Perms;
+use AuthZ\Tests\Support\StubChecker;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
