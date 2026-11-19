@@ -1,6 +1,8 @@
 # noid-oss/authz (PHP)
 
-PHP 8.2+ SDK for the [authz-spec](../authz-spec) contract: one account across brands, a Kratos + Hydra per brand, Keto as the permission store.
+> **Status: 0.1.0, early.** Tested against the spec vectors with stubbed HTTP and local keys. It has not been run against a real `/v1/check` service or a real Hydra JWKS endpoint yet. Pin the version and expect breaking changes before 1.0.
+
+PHP 8.2+ SDK for the [authz-spec](https://github.com/noid-oss/authz-spec) contract: one account across brands, a Kratos + Hydra per brand, Keto as the permission store.
 
 - `verify($token)`: signature and `exp` against the issuer's JWKS, issuer in a known list, `tenant_id` equals the configured tenant.
 - `hint($token)->can($permission)`: reads the token's `permissions` claim only. A hint, never authority.
