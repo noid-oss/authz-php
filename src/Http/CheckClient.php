@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Http;
+namespace AuthZ\Http;
 
-use NoidOss\Authz\Config;
-use NoidOss\Authz\Grammar;
-use NoidOss\Authz\Reason;
+use AuthZ\Config;
+use AuthZ\Grammar;
+use AuthZ\Reason;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Client\NetworkExceptionInterface;

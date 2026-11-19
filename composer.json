@@ -26,10 +26,10 @@
         "guzzlehttp/guzzle": "A PSR-18 client with a timeout option (any PSR-18 client works)"
     },
     "autoload": {
-        "psr-4": { "NoidOss\\Authz\\": "src/" }
+        "psr-4": { "AuthZ\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "NoidOss\\Authz\\Tests\\": "tests/" }
+        "psr-4": { "AuthZ\\Tests\\": "tests/" }
     },
     "config": {
         "sort-packages": true

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Http;
+namespace AuthZ\Http;
 
 interface Checker
 {

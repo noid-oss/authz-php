@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests\Support;
+namespace AuthZ\Tests\Support;
 
 use Firebase\JWT\JWT;
 use OpenSSLAsymmetricKey;

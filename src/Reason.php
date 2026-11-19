@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz;
+namespace AuthZ;
 
 /** Decision reasons, identical to the spec's vectors.schema.json. */
 enum Reason: string

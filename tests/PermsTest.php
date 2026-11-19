@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz\Tests;
+namespace AuthZ\Tests;
 
-use NoidOss\Authz\Config;
-use NoidOss\Authz\Manifest;
-use NoidOss\Authz\Perms;
-use NoidOss\Authz\Reason;
-use NoidOss\Authz\Step;
-use NoidOss\Authz\Tests\Support\StubChecker;
-use NoidOss\Authz\VerifiedToken;
+use AuthZ\Config;
+use AuthZ\Manifest;
+use AuthZ\Perms;
+use AuthZ\Reason;
+use AuthZ\Step;
+use AuthZ\Tests\Support\StubChecker;
+use AuthZ\VerifiedToken;
 use PHPUnit\Framework\TestCase;
 
 final class PermsTest extends TestCase
@@ -122,7 +122,7 @@ final class PermsTest extends TestCase
 
     public function testConfigAcceptsUuidAppAndDigitBrand(): void
     {
-        $config = new \NoidOss\Authz\Config('9idbi', '3F2B8C1E-9a4d-4e57-b6a0-1c2d3e4f5a6b', 'https://auth.example/', 'idbi');
+        $config = new \AuthZ\Config('9idbi', '3F2B8C1E-9a4d-4e57-b6a0-1c2d3e4f5a6b', 'https://auth.example/', 'idbi');
 
         self::assertSame('3F2B8C1E-9a4d-4e57-b6a0-1c2d3e4f5a6b', $config->app);
     }

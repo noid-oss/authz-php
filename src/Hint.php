@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz;
+namespace AuthZ;
 
 /**
  * The token's `permissions` claim, and nothing else. Never authoritative:

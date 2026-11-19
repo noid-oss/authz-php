@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NoidOss\Authz;
+namespace AuthZ;
 
 /** Result of Perms::explain(). */
 final readonly class Decision
