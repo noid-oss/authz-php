@@ -43,4 +43,25 @@ final class VectorsPinTest extends TestCase
 
         self::assertSame(self::pin()['specVersion'], $file['specVersion'] ?? null);
     }
+
+    /**
+     * relationVectors and bindingVectors describe the check SERVICE (relation walking, tenant binding),
+     * not the SDK. VectorsTest does not run them; they are pinned here so a section added, removed or
+     * resized by a spec sync is noticed and reviewed instead of passing silently.
+     */
+    public function testServiceOnlySectionsArePinnedButNotRunByTheSdk(): void
+    {
+        $file = json_decode((string) file_get_contents(__DIR__ . '/fixtures/vectors.json'), true, 512, JSON_THROW_ON_ERROR);
+        self::assertIsArray($file);
+
+        self::assertSame(
+            ['version', 'specVersion', 'config', 'vectors', 'linkVectors', 'relationVectors', 'bindingVectors'],
+            array_keys($file),
+            'vectors.json has a new or missing top-level section: decide whether the SDK must run it',
+        );
+        foreach (['relationVectors' => 16, 'bindingVectors' => 6] as $section => $count) {
+            self::assertIsArray($file[$section]);
+            self::assertCount($count, $file[$section], $section);
+        }
+    }
 }
